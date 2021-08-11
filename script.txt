@@ -1,1 +1,1 @@
-wget -O- https://raw.githubusercontent.com/dtinth/ez-jamulus-server/main/ezjaminstall.sh | sudo bash
+wget -O- https://git.io/JRPai | sudo bash
