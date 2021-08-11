@@ -1,0 +1,18 @@
+= ez-jamulus-server
+
+This is an script to install a headless Jamulus Server on a Debian cloud VM.
+
+It is created for people who have no Linux administration knowledge.
+
+== Install script
+
+Copy https://raw.githubusercontent.com/dtinth/ez-jamulus-server/main/script.txt[this installation script] and paste it into an SSH (e.g. PuTTY) session.
+
+== Configuration
+
+After running any of these commands, re-run the install script for changes to take effect.
+
+=== Change server name, city, country
+
+ $ echo 'NAME;CITY;0' | sudo tee /etc/jamulus-server-info
+
