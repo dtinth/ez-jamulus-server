@@ -28,9 +28,9 @@ After running any of these commands, re-run the install script for changes to ta
 
 === Make server private
 
- $ touch /etc/jamulus-private
+ $ sudo touch /etc/jamulus-private
 
 === Make server public
 
- $ rm -f /etc/jamulus-private
+ $ sudo rm -f /etc/jamulus-private
 
