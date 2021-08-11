@@ -4,6 +4,8 @@ This is an script to install a headless Jamulus Server on a Debian cloud VM.
 
 It is created for people who have no Linux administration knowledge.
 
+IMPORTANT: This script is not maintained (it may be out of date) and I do not provide support. Feel free to fork this project. If someone does, I will be very happy to direct people to that project.
+
 == Install script
 
 Copy https://raw.githubusercontent.com/dtinth/ez-jamulus-server/main/script.txt[this installation script] and paste it into an SSH (e.g. PuTTY) session.
@@ -16,3 +18,10 @@ After running any of these commands, re-run the install script for changes to ta
 
  $ echo 'NAME;CITY;0' | sudo tee /etc/jamulus-server-info
 
+=== Change welcome message
+
+ $ echo 'welcome to my server' | sudo tee /etc/jamulus-welcome-message
+
+=== Change number of max users
+
+ $ echo 16 | sudo tee /etc/jamulus-max-users
