@@ -4,7 +4,7 @@ This is an script to install a headless Jamulus Server on a Debian cloud VM.
 
 It is created for people who have little to no Linux administration knowledge.
 
-IMPORTANT: This script is not maintained (it may be out of date) and I do not provide support. Feel free to fork this project. If someone does, I will be very happy to direct people to that project.
+NOTE: This script is not maintained (it may be out of date). Please feel free to fork this project. If someone does, I will be very happy to direct people to that project.
 
 == Install script
 
