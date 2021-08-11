@@ -29,8 +29,18 @@ then
 echo 'Configured by ez-jamulus-server' | sudo tee /etc/jamulus-welcome-message
 fi
 
+if ! test -e /etc/jamulus-directory-server
+then
+echo 'anygenre1.jamulus.io:22124' | sudo tee /etc/jamulus-directory-server
+fi
+
 echo '#!/bin/bash -e
-exec /usr/bin/jamulus-headless -s -n -w /etc/jamulus-welcome-message -u "$(cat /etc/jamulus-max-users)" -T --serverinfo "$(cat /etc/jamulus-server-info)" --directoryserver anygenre1.jamulus.io:22124
+if test -e /etc/jamulus-private
+then
+exec /usr/bin/jamulus-headless -s -n -w /etc/jamulus-welcome-message -u "$(cat /etc/jamulus-max-users)" -T
+else
+exec /usr/bin/jamulus-headless -s -n -w /etc/jamulus-welcome-message -u "$(cat /etc/jamulus-max-users)" -T --serverinfo "$(cat /etc/jamulus-server-info)" --directoryserver "$(cat /etc/jamulus-directory-server)"
+fi
 ' | sudo tee /usr/bin/ez-jam-server
 
 sudo chmod +x /usr/bin/ez-jam-server

@@ -25,3 +25,12 @@ After running any of these commands, re-run the install script for changes to ta
 === Change number of max users
 
  $ echo 16 | sudo tee /etc/jamulus-max-users
+
+=== Make server private
+
+ $ touch /etc/jamulus-private
+
+=== Make server public
+
+ $ rm -f /etc/jamulus-private
+
