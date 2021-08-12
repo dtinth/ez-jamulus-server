@@ -18,6 +18,10 @@ After running any of these commands, re-run the install script above for changes
 
  echo 'NAME;CITY;0' | sudo tee /etc/jamulus-server-info
 
+* [ ] Replace `NAME` with your server name.
+* [ ] Replace `CITY` with your city.
+* [ ] Replace `0` with your country ID https://doc.qt.io/qt-5/qlocale.html#Country-enum[from this list].
+
 === Change welcome message
 
  echo 'welcome to my server' | sudo tee /etc/jamulus-welcome-message
