@@ -36,19 +36,25 @@ After running any of these commands, re-run the install script above for changes
 
 === Change server genre
 
-Any Genre 1::
+.Any Genre 1
  echo 'anygenre1.jamulus.io:22124' | sudo tee /etc/jamulus-directory-server
-Any Genre 2::
+
+.Any Genre 2
  echo 'anygenre2.jamulus.io:22224' | sudo tee /etc/jamulus-directory-server
-Any Genre 3::
+
+.Any Genre 3
  echo 'anygenre3.jamulus.io:22624' | sudo tee /etc/jamulus-directory-server
-Genre Rock::
+
+.Genre Rock
  echo 'rock.jamulus.io:22424' | sudo tee /etc/jamulus-directory-server
-Genre Jazz::
+
+.Genre Jazz
  echo 'jazz.jamulus.io:22324' | sudo tee /etc/jamulus-directory-server
-Genre Classical/Folk::
+
+.Genre Classical/Folk
  echo 'classical.jamulus.io:22524' | sudo tee /etc/jamulus-directory-server
-Genre Choral/Barbershop::
+
+.Genre Choral/Barbershop
  echo 'choral.jamulus.io:22724' | sudo tee /etc/jamulus-directory-server
 
 IMPORTANT: Do not forget to run the install script again for changes to take effect.
