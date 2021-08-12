@@ -1,6 +1,6 @@
 = ez-jamulus-server
 
-This is an script to install a headless Jamulus Server on a Debian cloud VM.
+This is a script to install a headless Jamulus Server on a Debian cloud VM.
 
 It is created for people who have little to no Linux administration knowledge.
 
