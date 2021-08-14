@@ -68,3 +68,11 @@ IMPORTANT: Do not forget to run the install script again for changes to take eff
  journalctl -u jamulus-headless
 
 See https://jamulus.io/wiki/Server-Linux#viewing-the-logs[the official Jamulus documentation] for more information.
+
+== Cloud providers
+
+It has been tested on the following Cloud Providers:
+
+* Huawei Cloud
+* Bangmod.Cloud
+* DigitalOcean
