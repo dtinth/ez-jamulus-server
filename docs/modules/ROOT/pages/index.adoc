@@ -62,3 +62,9 @@ After running any of these commands, re-run the install script above for changes
  echo 'choral.jamulus.io:22724' | sudo tee /etc/jamulus-directory-server
 
 IMPORTANT: Do not forget to run the install script again for changes to take effect.
+
+== Logs
+
+ journalctl -u jamulus-headless
+
+See https://jamulus.io/wiki/Server-Linux#viewing-the-logs[the official Jamulus documentation] for more information.
