@@ -76,3 +76,4 @@ It has been tested on the following Cloud Providers:
 * Huawei Cloud
 * Bangmod.Cloud
 * DigitalOcean
+* Linode
