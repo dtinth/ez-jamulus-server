@@ -16,7 +16,12 @@ echo "Step 4/$NUM_STEPS - Configure Jamulus"
 
 if ! test -e /etc/jamulus-server-info
 then
-echo 'ezjam;Unspecified;0' | sudo tee /etc/jamulus-server-info
+SERVER_NAME=ezjam
+if command -v openssl
+then
+SERVER_NAME=ezjam-"$(openssl rand -hex 2)"
+fi
+echo "$SERVER_NAME;Unspecified;0" | sudo tee /etc/jamulus-server-info
 fi
 
 if ! test -e /etc/jamulus-max-users
@@ -51,4 +56,4 @@ echo "Step 5/$NUM_STEPS - Start"
 sudo systemctl daemon-reload
 sudo systemctl restart jamulus-headless
 
-echo "Finished."
+echo "Finished. Your server name is \"$(cat /etc/jamulus-server-info | cut --fields=1 --delimiter=';')\""
