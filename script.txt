@@ -1,1 +1,1 @@
-wget -O- https://git.io/JRPai | sudo bash
+wget -O- https://git.io/ezjam | sudo bash
