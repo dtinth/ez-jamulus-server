@@ -21,7 +21,7 @@ fi
 
 if ! test -e /etc/jamulus-max-users
 then
-echo '25' | sudo tee /etc/jamulus-max-users
+echo '10' | sudo tee /etc/jamulus-max-users
 fi
 
 if ! test -e /etc/jamulus-welcome-message
