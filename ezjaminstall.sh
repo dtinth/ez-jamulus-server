@@ -7,7 +7,7 @@ echo "Step 1/$NUM_STEPS - Download Jamulus"
 wget -O"$JAMULUS_FILE" "$JAMULUS_URL"
 
 echo "Step 2/$NUM_STEPS - Update system"
-sudo apt update -y
+sudo apt update --allow-releaseinfo-change -y
 
 echo "Step 3/$NUM_STEPS - Install Jamulus"
 sudo apt install ./jamulus_headless_3.8.0_ubuntu_amd64.deb -y
