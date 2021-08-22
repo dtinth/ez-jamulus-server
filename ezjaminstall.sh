@@ -16,7 +16,7 @@ echo "Step 4/$NUM_STEPS - Configure Jamulus"
 
 if ! test -e /etc/jamulus-server-info
 then
-echo 'ezjam;Somewhere;0' | sudo tee /etc/jamulus-server-info
+echo 'ezjam;Unspecified;0' | sudo tee /etc/jamulus-server-info
 fi
 
 if ! test -e /etc/jamulus-max-users
@@ -26,7 +26,7 @@ fi
 
 if ! test -e /etc/jamulus-welcome-message
 then
-echo 'Configured by ez-jamulus-server' | sudo tee /etc/jamulus-welcome-message
+echo 'Configured by ez-jamulus-server<br>https://github.com/dtinth/ez-jamulus-server' | sudo tee /etc/jamulus-welcome-message
 fi
 
 if ! test -e /etc/jamulus-directory-server
