@@ -77,3 +77,18 @@ It has been tested on the following Cloud Providers:
 * Bangmod.Cloud
 * DigitalOcean
 * Linode
+
+== Troubleshooting
+
+=== “sudo: command not found”
+
+----
+-bash: sudo: command not found
+...
+Cannot write to '-' (Broken pipe).
+----
+
+Run this command and try out the installation script again:
+
+ apt update --allow-releaseinfo-change -y
+ apt install -y sudo
