@@ -38,6 +38,12 @@ After running any of these commands, re-run the install script above for changes
 
  sudo rm -f /etc/jamulus-private
 
+=== Set time zone
+
+ sudo timedatectl set-timezone Asia/Bangkok
+
+* [ ] Replace `Asia/Bangkok` with a https://en.wikipedia.org/wiki/List_of_tz_database_time_zones[TZ database name from this table].
+
 === Change server genre
 
 .Any Genre 1
