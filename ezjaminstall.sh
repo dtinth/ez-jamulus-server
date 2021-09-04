@@ -39,12 +39,15 @@ then
 echo 'anygenre1.jamulus.io:22124' | sudo tee /etc/jamulus-directory-server
 fi
 
+sudo mkdir -p /var/run/jamulus
+sudo chown jamulus:nogroup /var/run/jamulus
+
 echo '#!/bin/bash -e
 if test -e /etc/jamulus-private
 then
-exec /usr/bin/jamulus-headless -s -n -w /etc/jamulus-welcome-message -u "$(cat /etc/jamulus-max-users)" -T -m /tmp/jamulus-status.html
+exec /usr/bin/jamulus-headless -s -n -w /etc/jamulus-welcome-message -u "$(cat /etc/jamulus-max-users)" -T -m /var/run/jamulus/status.html
 else
-exec /usr/bin/jamulus-headless -s -n -w /etc/jamulus-welcome-message -u "$(cat /etc/jamulus-max-users)" -T -m /tmp/jamulus-status.html --serverinfo "$(cat /etc/jamulus-server-info)" --directoryserver "$(cat /etc/jamulus-directory-server)"
+exec /usr/bin/jamulus-headless -s -n -w /etc/jamulus-welcome-message -u "$(cat /etc/jamulus-max-users)" -T -m /var/run/jamulus/status.html --serverinfo "$(cat /etc/jamulus-server-info)" --directoryserver "$(cat /etc/jamulus-directory-server)"
 fi
 ' | sudo tee /usr/bin/ez-jam-server
 
