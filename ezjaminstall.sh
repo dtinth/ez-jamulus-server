@@ -3,6 +3,17 @@ JAMULUS_FILE=jamulus_headless_3.8.0_ubuntu_amd64.deb
 JAMULUS_URL=https://github.com/jamulussoftware/jamulus/releases/download/r3_8_0/$JAMULUS_FILE
 NUM_STEPS=5
 
+command_exists() {
+  command -v "$1" >/dev/null 2>&1
+}
+
+if ! command_exists sudo && test "$(whoami)" = root
+then
+  echo "Step 0/$NUM_STEPS - Install sudo"
+  apt update --allow-releaseinfo-change -y
+  apt install sudo -y
+fi
+
 echo "Step 1/$NUM_STEPS - Download Jamulus"
 wget -O"$JAMULUS_FILE" "$JAMULUS_URL"
 
